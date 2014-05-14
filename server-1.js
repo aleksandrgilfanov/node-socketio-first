@@ -17,6 +17,8 @@ var server = http.createServer(function(request, response){
 		response.end();
 		break;
 
+		case '/webpage.js':
+		case '/jquery-1.11.1.min.js':
 		case '/socket.html':
 		fs.readFile(__dirname + path, function(error, data){
                 if (error){

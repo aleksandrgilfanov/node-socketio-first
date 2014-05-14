@@ -1,15 +1,35 @@
+<!doctype html>
 <html>
   <head>
+    <title>socket web page</title>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/jquery-1.11.1.min.js"></script>
+    <script src="/webpage.js"></script>
   </head>
   <body>
-    <script>
-      var socket = io.connect();
 
-      socket.on('message', function(data){
-        console.log(data.message);
-      });
-    </script>
-    <div>This is our socket.html file</div>
+    <header>
+      <div class="container">
+      <h1>Page header</h1>
+        <nav>
+          <a href="#">menu-item 1</a> |
+          <a href="#">menu-item 2</a> |
+          <a href="#">menu-item 3</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <p>This is our socket.html file</p>
+      <div class="content">
+      asdfa
+      </div>
+    </main>
+
+    <footer>
+    <p>test footer</p>
+    </footer>
+
+    
   </body>
 </html>
