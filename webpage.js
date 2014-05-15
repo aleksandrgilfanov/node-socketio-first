@@ -5,7 +5,7 @@ var main = function () {
     socket.on('message', function (data) {
         var $content;
         $content = $("main .content");
-        $content.empty();
+        //$content.empty();
         if (data.message) {
             $content.append($("<li>").text(data.message)); 
         } 
