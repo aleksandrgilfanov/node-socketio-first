@@ -17,6 +17,7 @@ var server = http.createServer(function(request, response){
 		response.end();
 		break;
 
+		case '/style.css':
 		case '/webpage.js':
 		case '/jquery-1.11.1.min.js':
 		case '/socket.html':
@@ -27,7 +28,10 @@ var server = http.createServer(function(request, response){
                     response.end();
                 }
                 else{
-                    response.writeHead(200, {"Content-Type": "text/html"});
+                	var typeOfContent = "text/html";
+                	if (path.indexOf('.css') != -1)
+                		typeOfContent = "text/css";
+                    response.writeHead(200, {"Content-Type": typeOfContent});
                     response.write(data, "utf8");
                     response.end();
                 }
