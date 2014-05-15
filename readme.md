@@ -6,3 +6,5 @@ some experiments with socket io, fs and network
 It listens at 6666, waiting connection from `message-client` 
 Web-page is at [http://localhost:8001/socket.html][]
 If `message-client` sends data - it is shown on web-page
+
+[http://localhost:8001/socket.html]: http://localhost:8001/socket.html
