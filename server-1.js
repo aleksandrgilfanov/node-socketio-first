@@ -50,4 +50,7 @@ var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
     socket.emit('message', {'message': 'hello world'});
+    setInterval(function() {
+        socket.emit('message', {'date': new Date()});
+    }, 1000);
 });

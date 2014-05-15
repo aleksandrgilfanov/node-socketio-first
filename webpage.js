@@ -3,15 +3,16 @@ var main = function () {
     var socket = io.connect();
  
     socket.on('message', function (data) {
-        if(data.message) {
-
-            var $content;
-            console.log(data.message);
-            
-            $content = $("main .content");
-            $content.append($("<li>").text(data.message));
-
-        } else {
+        var $content;
+        $content = $("main .content");
+        
+        if (data.message) {
+            $content.append($("<li>").text(data.message)); 
+        } 
+        else if (data.date) {
+            $content.append($("<li>").text(data.date));
+        }
+        else {
             console.log("There is a problem:", data);
         }
     });
